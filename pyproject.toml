@@ -23,9 +23,10 @@ packages = [{ include = "astral", from = "src" }]
 include = ["src/doc", "src/test"]
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = ">=3.9,<4.0"
 "backports.zoneinfo" = { version = "*", markers = "python_version < '3.9'" }
 tzdata = { version = "*", markers = "sys_platform == 'win32'" }
+matplotlib = "^3.8.2"
 
 [tool.poetry.dev-dependencies]
 freezegun = "*"

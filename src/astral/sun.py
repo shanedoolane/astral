@@ -880,7 +880,9 @@ def sunset(
             )
             tot_date = tot.date()
             if tot_date != date - delta:
-                raise ValueError("Unable to find a sunset time on the date specified")
+                print(f"{tot}")
+                print(f"Unable to find a sunset time on {date} with tot_date {tot_date}")
+                # raise ValueError(f"Unable to find a sunset time on {date} with tot_date {tot_date}")
         return tot
     except ValueError as exc:
         if exc.args[0] == "math domain error":
